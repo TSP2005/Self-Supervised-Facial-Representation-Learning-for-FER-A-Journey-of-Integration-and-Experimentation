@@ -1,0 +1,116 @@
+W0329 20:19:05.117174 203289 site-packages/torch/distributed/run.py:792] 
+W0329 20:19:05.117174 203289 site-packages/torch/distributed/run.py:792] *****************************************
+W0329 20:19:05.117174 203289 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0329 20:19:05.117174 203289 site-packages/torch/distributed/run.py:792] *****************************************
+usage: main.py [-h] [--dataset {in1k,in100,im_folder,in1k_idx,vggface2}]
+               [--data-root DATA_ROOT] [--cfp-root CFP_ROOT] [--arch ARCH]
+               [--backbone {resnet101_encoder,resnet18_encoder,resnet34_encoder,resnet50_encoder,resnet50w2x_cls,resnet50w2x_encoder}]
+               [-j WORKERS] [--epochs EPOCHS] [--start-epoch START_EPOCH]
+               [--warmup-epoch WARMUP_EPOCH] [-b BATCH_SIZE] [--lr LR]
+               [--schedule [SCHEDULE ...]] [--cos] [--momentum MOMENTUM]
+               [--wd WD] [--save-dir SAVE_DIR] [-p PRINT_FREQ]
+               [--save-freq SAVE_FREQ] [--eval-freq EVAL_FREQ]
+               [--resume RESUME] [--pretrained PRETRAINED] [-e] [--seed SEED]
+               [--world_size WORLD_SIZE] [--rank RANK] [--gpu GPU]
+               [--dist_backend DIST_BACKEND] [--dist_url DIST_URL]
+               [--local_rank LOCAL_RANK] [--multiprocessing_distributed]
+               [--proj-dim PROJ_DIM] [--enc-m ENC_M] [--norm NORM]
+               [--num-neck-mlp NUM_NECK_MLP] [--hid-dim HID_DIM] [--amp]
+               [--lewel-l2-norm] [--lewel-scale LEWEL_SCALE]
+               [--lewel-num-heads LEWEL_NUM_HEADS]
+               [--lewel-loss-weight LEWEL_LOSS_WEIGHT]
+               [--train-percent TRAIN_PERCENT] [--mask_type MASK_TYPE]
+               [--num_proto NUM_PROTO] [--teacher_temp TEACHER_TEMP]
+               [--loss_w_cluster LOSS_W_CLUSTER] [--num-nn NUM_NN]
+               [--diversity_lambda DIVERSITY_LAMBDA]
+main.py: error: unrecognized arguments:  
+usage: main.py [-h] [--dataset {in1k,in100,im_folder,in1k_idx,vggface2}]
+               [--data-root DATA_ROOT] [--cfp-root CFP_ROOT] [--arch ARCH]
+               [--backbone {resnet101_encoder,resnet18_encoder,resnet34_encoder,resnet50_encoder,resnet50w2x_cls,resnet50w2x_encoder}]
+               [-j WORKERS] [--epochs EPOCHS] [--start-epoch START_EPOCH]
+               [--warmup-epoch WARMUP_EPOCH] [-b BATCH_SIZE] [--lr LR]
+               [--schedule [SCHEDULE ...]] [--cos] [--momentum MOMENTUM]
+               [--wd WD] [--save-dir SAVE_DIR] [-p PRINT_FREQ]
+               [--save-freq SAVE_FREQ] [--eval-freq EVAL_FREQ]
+               [--resume RESUME] [--pretrained PRETRAINED] [-e] [--seed SEED]
+               [--world_size WORLD_SIZE] [--rank RANK] [--gpu GPU]
+               [--dist_backend DIST_BACKEND] [--dist_url DIST_URL]
+               [--local_rank LOCAL_RANK] [--multiprocessing_distributed]
+               [--proj-dim PROJ_DIM] [--enc-m ENC_M] [--norm NORM]
+               [--num-neck-mlp NUM_NECK_MLP] [--hid-dim HID_DIM] [--amp]
+               [--lewel-l2-norm] [--lewel-scale LEWEL_SCALE]
+               [--lewel-num-heads LEWEL_NUM_HEADS]
+               [--lewel-loss-weight LEWEL_LOSS_WEIGHT]
+               [--train-percent TRAIN_PERCENT] [--mask_type MASK_TYPE]
+               [--num_proto NUM_PROTO] [--teacher_temp TEACHER_TEMP]
+               [--loss_w_cluster LOSS_W_CLUSTER] [--num-nn NUM_NN]
+               [--diversity_lambda DIVERSITY_LAMBDA]
+main.py: error: unrecognized arguments:  
+W0329 20:19:27.204290 203289 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 204925 closing signal SIGTERM
+E0329 20:19:27.622611 203289 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 2) local_rank: 1 (pid: 204926) of binary: /fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/bin/python
+Traceback (most recent call last):
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+main.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-29_20:19:27
+  host      : localhost.localdomain
+  rank      : 1 (local_rank: 1)
+  exitcode  : 2 (pid: 204926)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+W0330 17:01:56.008887 185222 site-packages/torch/distributed/run.py:792] 
+W0330 17:01:56.008887 185222 site-packages/torch/distributed/run.py:792] *****************************************
+W0330 17:01:56.008887 185222 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0330 17:01:56.008887 185222 site-packages/torch/distributed/run.py:792] *****************************************
+/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/bin/python: can't open file '/fab3/btech/2022/tamma.pranav22b/Facial_Region_Awareness-main3/ ': [Errno 2] No such file or directory
+/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/bin/python: can't open file '/fab3/btech/2022/tamma.pranav22b/Facial_Region_Awareness-main3/ ': [Errno 2] No such file or directory
+W0330 17:01:56.282387 185222 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 188387 closing signal SIGTERM
+E0330 17:01:56.312860 185222 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 2) local_rank: 1 (pid: 188456) of binary: /fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/bin/python
+Traceback (most recent call last):
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/fab3/btech/2022/tamma.pranav22b/anaconda3/envs/tspenv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+  FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-30_17:01:56
+  host      : localhost.localdomain
+  rank      : 1 (local_rank: 1)
+  exitcode  : 2 (pid: 188456)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
